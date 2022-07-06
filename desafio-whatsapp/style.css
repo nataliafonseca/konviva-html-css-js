@@ -181,13 +181,19 @@ main {
 }
 
 .sidebar-chats-item-text {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 1rem;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eaedef;
   padding: 1rem;
+}
+
+.sidebar-chats-item-contact {
+  width: 100%;
+  overflow: hidden;
 }
 
 .sidebar-chats-item-title {
@@ -200,6 +206,10 @@ main {
   font-weight: normal;
   color: #667781;
   font-size: 0.9rem;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar-chats-item-time-status {
