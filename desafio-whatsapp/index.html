@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <script src="https://unpkg.com/phosphor-icons"></script>
   <title>Desafio - WhatsApp</title>
@@ -22,6 +23,7 @@
           <i class="ph-dots-three-outline-vertical-fill"></i>
         </div>
       </div>
+
       <div class="sidebar-search">
         <div class="search-input">
           <label for="search">
@@ -30,16 +32,323 @@
           <input type="text" id="search" name="search" placeholder="Search or start new chat" />
         </div>
       </div>
-      <div class="sidebar-chats"></div>
+
+      <div class="sidebar-chats">
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item active">
+          <img
+            src="data:image/png;base64,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"
+            alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Frontend Decola</h2>
+              <p class="sidebar-chats-item-subtitle">Bruna: kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-chats-item muted">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item muted">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-chats-item">
+          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <div class="sidebar-chats-item-text">
+            <div class="sidebar-chats-item-contact">
+              <h2 class="sidebar-chats-item-title">Natália Fonseca</h2>
+              <p class="sidebar-chats-item-subtitle">kkkkkkkkkk</p>
+            </div>
+            <div class="sidebar-chats-item-time-status">
+              <time class="sidebar-chats-item-time">10:50</time>
+              <i class="ph-speaker-slash-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="chat">
       <div class="chat-header">
         <div class="chat-header-info">
-          <img src="https://github.com/nataliafonseca.png" alt="Foto de perfil">
+          <img
+            src="data:image/png;base64,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"
+            alt="Foto de perfil">
           <div>
-            <h2 class="chat-header-title">Natália Fonseca</h2>
-            <p class="chat-header-subtitle">Clique aqui para dados do contato</p>
+            <h2 class="chat-header-title">Frontend Decola</h2>
+            <p class="chat-header-subtitle">Bruna, Gabi, Idilene, Jéssica, Lucas, Maria, Rhamanda, Taisa, Ted, Vivian,
+              Você</p>
           </div>
         </div>
         <div class="header-icons">
@@ -47,7 +356,73 @@
           <i class="ph-dots-three-outline-vertical-fill"></i>
         </div>
       </div>
-      <div class="chat-body"></div>
+      <div class="chat-body">
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="azul">Idilene Brito</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere. Nostrum quia atque excepturi a reprehenderit error
+              voluptates sed.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message mine">
+          <div class="chat-message-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere. Nostrum quia atque excepturi a reprehenderit error
+              voluptates sed.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="azul-claro">Maria Helena</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="mostarda">Jéssica Troiano</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="azul-claro">Maria Helena</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="roxo">Ted</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam.
+            </p>
+          </div>
+          <time>9:36</time>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="verde">Taisa Braga</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere. Nostrum quia atque excepturi a reprehenderit error
+              voluptates sed.</p>
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-content">
+            <h4 class="rosa">Bruna Finholdt</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem, dolor, nemo maxime aliquam
+              quisquam quam quis soluta quasi repellendus facere. Nostrum quia atque excepturi a reprehenderit error
+              voluptates sed.</p>
+          </div>
+          <time>9:36</time>
+        </div>
+      </div>
       <div class="chat-input">
         <div class="chat-input-icons">
           <i class="ph-smiley-bold"></i>
@@ -58,7 +433,6 @@
           <i class="ph-microphone-fill"></i>
         </div>
       </div>
-    </div>
     </div>
   </main>
 </body>
