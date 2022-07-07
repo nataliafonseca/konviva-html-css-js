@@ -1,34 +1,43 @@
 {
-    "palavras": [
-        {
-            "id": 1,
-            "palavra": "Elefante",
-            "categoriaId": 1
-        },
-        {
-            "id": 2,
-            "palavra": "Girafa",
-            "categoriaId": 1
-        },
-        {
-            "id": 3,
-            "palavra": "Sao Paulo",
-            "categoriaId": 2
-        },
-        {
-            "id": 4,
-            "palavra": "Rio de Janeiro",
-            "categoriaId": 2
-        }
-    ],
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Animal"
-        },
-        {
-            "id": 2,
-            "nome": "Cidade"
-        }
-    ]
+  "palavras": [
+    {
+      "id": 1,
+      "palavra": "Elefante",
+      "categoriaId": 1
+    },
+    {
+      "id": 2,
+      "palavra": "Girafa",
+      "categoriaId": 1
+    },
+    {
+      "id": 3,
+      "palavra": "Sao Paulo",
+      "categoriaId": 2
+    },
+    {
+      "id": 4,
+      "palavra": "Rio de Janeiro",
+      "categoriaId": 2
+    },
+    {
+      "palavra": "Cachorro",
+      "categoriaId": "1",
+      "id": 5
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Animal"
+    },
+    {
+      "id": 2,
+      "nome": "Cidade"
+    },
+    {
+      "nome": "Profissões",
+      "id": 3
+    }
+  ]
 }

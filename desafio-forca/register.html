@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Desafio - Forca</title>
+</head>
+
+<body>
+  <main>
+    <form class="register-form" id="category-form">
+      <h2>Cadastrar Categoria</h2>
+      <input type="text" id="new-category" placeholder="Categoria" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <form class="register-form" id="word-form">
+      <h2>Cadastrar Palavra</h2>
+      <input type="text" id="new-word" placeholder="Palavra" required>
+      <select name="category" id="category-select" required>
+        <option value="" disabled>Categoria</option>
+      </select>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </main>
+
+  <a class="link" href="/index.html">Voltar ao Jogo</a>
+
+  <script src="register.js"></script>
+</body>
+
+</html>

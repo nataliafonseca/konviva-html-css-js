@@ -6,8 +6,8 @@ let playedLetters = [];
 const wordDiv = document.getElementById("word");
 
 const guessInput = document.getElementById("guess-input");
-const guessButton = document.getElementById("guess-button");
-guessButton.addEventListener("click", play);
+const guessForm = document.getElementById("guess-form");
+guessForm.addEventListener("submit", play);
 
 const categorySpan = document.getElementById("category");
 const errorCountSpan = document.getElementById("errors");
