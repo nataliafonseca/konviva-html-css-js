@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Desafio - Forca</title>
+</head>
+
+<body>
+  <main class="game">
+    <button id="start" onclick="startGame()">INICIAR JOGO</button>
+
+    <div class="word" id="word">
+    </div>
+
+    <form class="form">
+      <input id="guess-input" type="text" required>
+      <button id="guess-button">ENVIAR</button>
+    </form>
+
+    <div>
+      <p class="info">Categoria: <span id="category"></span></p>
+      <p class="info">Erros: <span id="errors"></span> / 7</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
