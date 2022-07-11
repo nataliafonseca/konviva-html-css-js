@@ -1,17 +1,27 @@
+window.addEventListener("load", startGame);
+const restartButton = document.querySelector(".restart");
+restartButton.addEventListener("click", startGame);
+
 const game = document.querySelector(".game");
 const result = document.querySelector(".result");
-const restartButton = document.querySelector(".restart");
-restartButton.addEventListener("click", restart);
 
-for (const button of game.children) {
-  button.addEventListener("click", onPlay);
+let player;
+let winner;
+let winningCases;
+
+function startGame() {
+  player = "X";
+  winner = null;
+  winningCases = [];
+  result.innerText = `Vez do jogador ${player}`;
+
+  for (const button of game.children) {
+    button.removeAttribute("class");
+    button.removeAttribute("data-value");
+    button.removeAttribute("disabled");
+    button.addEventListener("click", onPlay);
+  }
 }
-
-let player = "X";
-let winner = null;
-let winningCases = [];
-
-result.innerText = `Vez do jogador ${player}`;
 
 function togglePlayer() {
   if (player === "X") player = "O";
@@ -73,18 +83,5 @@ function checkResult() {
 
     if (winner) result.innerText = `Jogador ${winner} venceu!`;
     else result.innerText = `Deu velha!`;
-  }
-}
-
-function restart() {
-  player = "X";
-  winner = null;
-  winningCases = [];
-  result.innerText = `Vez do jogador ${player}`;
-
-  for (const button of game.children) {
-    button.removeAttribute("class");
-    button.removeAttribute("data-value");
-    button.removeAttribute("disabled");
   }
 }
