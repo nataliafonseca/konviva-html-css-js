@@ -1,10 +1,13 @@
 const game = document.querySelector(".game");
+const result = document.querySelector(".result");
+
 for (const button of game.children) {
   button.addEventListener("click", onPlay);
 }
 
 let player = "X";
 let winner = null;
+let winningCases = [];
 
 function togglePlayer() {
   if (player === "X") player = "O";
@@ -30,6 +33,11 @@ function checkWinner(button1, button2, button3) {
     game.children[button1].dataset.value ===
       game.children[button3].dataset.value
   ) {
+    winningCases = [
+      game.children[button1],
+      game.children[button2],
+      game.children[button3],
+    ];
     winner = game.children[button1].dataset.value;
     return true;
   }
@@ -56,10 +64,22 @@ function checkResult() {
     checkTie()
   ) {
     for (const button of game.children) button.disabled = true;
-
-    const result = document.querySelector(".result");
+    for (const button of winningCases) button.classList.add("win");
 
     if (winner) result.innerHTML = `Jogador ${winner} venceu!`;
-    else result.innerHTML = `O jogo empatou!`;
+    else result.innerHTML = `Deu velha!`;
+  }
+}
+
+function restart() {
+  player = "X";
+  winner = null;
+  winningCases = [];
+  result.innerHTML = "";
+
+  for (const button of game.children) {
+    button.removeAttribute("class");
+    button.removeAttribute("data-value");
+    button.removeAttribute("disabled");
   }
 }
