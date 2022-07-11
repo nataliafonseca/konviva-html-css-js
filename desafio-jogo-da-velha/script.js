@@ -1,5 +1,7 @@
 const game = document.querySelector(".game");
 const result = document.querySelector(".result");
+const restartButton = document.querySelector(".restart");
+restartButton.addEventListener("click", restart);
 
 for (const button of game.children) {
   button.addEventListener("click", onPlay);
