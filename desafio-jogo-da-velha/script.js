@@ -45,7 +45,6 @@ function checkTie() {
 
 function checkResult() {
   if (
-    checkTie() ||
     checkWinner(0, 1, 2) ||
     checkWinner(3, 4, 5) ||
     checkWinner(6, 7, 8) ||
@@ -53,7 +52,8 @@ function checkResult() {
     checkWinner(1, 4, 7) ||
     checkWinner(2, 5, 8) ||
     checkWinner(0, 4, 8) ||
-    checkWinner(2, 4, 6)
+    checkWinner(2, 4, 6) ||
+    checkTie()
   ) {
     for (const button of game.children) button.disabled = true;
 
