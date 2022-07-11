@@ -11,9 +11,12 @@ let player = "X";
 let winner = null;
 let winningCases = [];
 
+result.innerText = `Vez do jogador ${player}`;
+
 function togglePlayer() {
   if (player === "X") player = "O";
   else player = "X";
+  result.innerText = `Vez do jogador ${player}`;
 }
 
 function onPlay(event) {
@@ -68,8 +71,8 @@ function checkResult() {
     for (const button of game.children) button.disabled = true;
     for (const button of winningCases) button.classList.add("win");
 
-    if (winner) result.innerHTML = `Jogador ${winner} venceu!`;
-    else result.innerHTML = `Deu velha!`;
+    if (winner) result.innerText = `Jogador ${winner} venceu!`;
+    else result.innerText = `Deu velha!`;
   }
 }
 
@@ -77,7 +80,7 @@ function restart() {
   player = "X";
   winner = null;
   winningCases = [];
-  result.innerHTML = "";
+  result.innerText = `Vez do jogador ${player}`;
 
   for (const button of game.children) {
     button.removeAttribute("class");
