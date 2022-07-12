@@ -101,7 +101,7 @@ function addLetterToWord(letter) {
 
 function addError() {
   errorCountSpan.innerText = ++errorCountSpan.innerText;
-  if (parseInt(errorCountSpan.innerText) === 7) {
+  if (parseInt(errorCountSpan.innerText) === 10) {
     setTimeout(() => {
       alert("AAAAAAAAA, você foi enforcado!");
       ongoingGame = false;
