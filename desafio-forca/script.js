@@ -22,13 +22,15 @@ async function startGame() {
 }
 
 async function getWord() {
-  const response = await fetch("http://localhost:3000/palavras");
+  const response = await fetch(
+    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/palavras"
+  );
   const words = await response.json();
   wordResponse = words[Math.floor(Math.random() * words.length)];
   word = wordResponse.palavra.toLowerCase();
 
   const response2 = await fetch(
-    `http://localhost:3000/categorias/${wordResponse.categoriaId}`
+    `https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/categorias/${wordResponse.categoriaId}`
   );
   category = (await response2.json()).nome;
 }
@@ -101,7 +103,8 @@ function addLetterToWord(letter) {
 
 function addError() {
   errorCountSpan.innerText = ++errorCountSpan.innerText;
-  if (parseInt(errorCountSpan.innerText) === 10) {
+
+  if (parseInt(errorCountSpan.innerText) === 9) {
     setTimeout(() => {
       alert("AAAAAAAAA, você foi enforcado!");
       ongoingGame = false;

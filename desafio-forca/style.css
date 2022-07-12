@@ -17,6 +17,12 @@ body {
 
 .game {
   display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+}
+
+.game > div {
+  display: grid;
   gap: 2rem;
 }
 
@@ -67,8 +73,7 @@ select {
   min-width: 1ch;
 }
 
-button,
-a {
+button {
   font: inherit;
   color: inherit;
   text-transform: uppercase;
@@ -82,8 +87,7 @@ a {
   border: 1px solid black;
 }
 
-button:hover,
-a:hover {
+button:hover {
   background-color: #e5e5e5;
 }
 
@@ -96,4 +100,147 @@ a:hover {
 .register-form h2 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+a {
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.picture {
+  position: relative;
+  margin-inline: auto;
+  width: 296px;
+}
+
+.forca1 {
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background-color: #333;
+  bottom: 0;
+  left: 0;
+}
+
+.forca2 {
+  position: absolute;
+  width: 4px;
+  height: 250px;
+  background-color: #333;
+  bottom: 0;
+  left: 48px;
+}
+
+.forca3 {
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  background-color: #333;
+  bottom: 250px;
+  left: 48px;
+}
+
+.forca4 {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  background-color: #333;
+  bottom: 204px;
+  left: 248px;
+}
+
+.head {
+  aspect-ratio: 1;
+  width: 60px;
+  border: 4px solid #c767a1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 144px;
+  left: 220px;
+}
+
+.body {
+  position: absolute;
+  width: 4px;
+  height: 80px;
+  background-color: #c767a1;
+  bottom: 64px;
+  left: 248px;
+}
+
+.left-arm {
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #c767a1;
+  bottom: 124px;
+  left: 250px;
+}
+
+.right-arm {
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #c767a1;
+  bottom: 124px;
+  left: 200px;
+}
+
+.left-leg {
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #c767a1;
+  bottom: 46px;
+  left: 242px;
+  transform: rotate(50deg);
+}
+
+.right-leg {
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #c767a1;
+  bottom: 46px;
+  left: 208px;
+  transform: rotate(-50deg);
+}
+
+.eyes {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  bottom: 178px;
+  left: 234px;
+}
+
+.eyes div {
+  height: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #c767a1;
+}
+
+.nose {
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  background-color: #c767a1;
+  bottom: 168px;
+  left: 248px;
+}
+
+.mouth {
+  position: absolute;
+  width: 16px;
+  height: 4px;
+  background-color: #c767a1;
+  bottom: 158px;
+  left: 242px;
 }

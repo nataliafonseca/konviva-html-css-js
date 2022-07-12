@@ -10,7 +10,9 @@ const categorySelect = document.getElementById("category-select");
 const newWordInput = document.getElementById("new-word");
 
 async function onLoad() {
-  const response = await fetch("http://localhost:3000/categorias");
+  const response = await fetch(
+    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/categorias"
+  );
   const categories = await response.json();
 
   let options = ``;
@@ -25,28 +27,34 @@ async function onLoad() {
 async function registerCategory(event) {
   event.preventDefault();
 
-  await fetch("http://localhost:3000/categorias", {
-    method: "POST",
-    body: JSON.stringify({
-      nome: newCategoryInput.value,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+  await fetch(
+    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/categorias",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        nome: newCategoryInput.value,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }
+  );
 }
 
 async function registerWord(event) {
   event.preventDefault();
 
-  await fetch("http://localhost:3000/palavras", {
-    method: "POST",
-    body: JSON.stringify({
-      palavra: newWordInput.value,
-      categoriaId: categorySelect.value,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+  await fetch(
+    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/palavras",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        palavra: newWordInput.value,
+        categoriaId: categorySelect.value,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }
+  );
 }

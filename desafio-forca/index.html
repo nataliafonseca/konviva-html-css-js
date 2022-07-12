@@ -13,20 +13,42 @@
 
 <body>
   <main class="game">
-    <button id="start" onclick="startGame()">INICIAR JOGO</button>
-
-    <div class="word" id="word">
-    </div>
-
-    <form class="guess-form" id="guess-form">
-      <input id="guess-input" type="text" required>
-      <button type="submit">ENVIAR</button>
-    </form>
-
     <div>
-      <p class="info">Categoria: <span id="category"></span></p>
-      <p class="info">Erros: <span id="errors"></span> / 10</p>
+      <button id="start" onclick="startGame()">INICIAR JOGO</button>
+
+      <div class="word" id="word">
+      </div>
+
+      <form class="guess-form" id="guess-form">
+        <input id="guess-input" type="text" required>
+        <button type="submit">ENVIAR</button>
+      </form>
+
+      <div>
+        <p class="info">Categoria: <span id="category"></span></p>
+        <p class="info">Erros: <span id="errors"></span> / 9</p>
+      </div>
     </div>
+    <div class="picture">
+      <div class="forca1"></div>
+      <div class="forca2"></div>
+      <div class="forca3"></div>
+      <div class="forca4"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="right-arm"></div>
+      <div class="left-arm"></div>
+      <div class="right-leg"></div>
+      <div class="left-leg"></div>
+      <div class="eyes">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+
+
   </main>
 
   <a class="link" href="./register.html">Cadastrar palavra ou categoria</a>
