@@ -23,6 +23,14 @@ button:disabled {
   cursor: initial;
 }
 
+.title {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+}
+
 .result {
   margin-bottom: 2rem;
   text-align: center;
@@ -52,8 +60,8 @@ button:disabled {
 .game button {
   border: none;
   background: #fff;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 .game button:disabled {
@@ -70,12 +78,12 @@ button:disabled {
 
 .playerX::after {
   content: "X";
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 .playerO::after {
   content: "O";
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 .game button.win {
