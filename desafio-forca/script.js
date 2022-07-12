@@ -53,12 +53,12 @@ function setWord() {
   errorCountSpan.innerText = 0;
 }
 
-function play(event) {
+async function play(event) {
   event.preventDefault();
 
   if (!ongoingGame) {
     if (confirm("Deseja iniciar um novo jogo?")) {
-      startGame();
+      await startGame();
     } else {
       return;
     }
@@ -103,8 +103,24 @@ function addLetterToWord(letter) {
 
 function addError() {
   errorCountSpan.innerText = ++errorCountSpan.innerText;
-
+  if (parseInt(errorCountSpan.innerText) === 1)
+    document.getElementById("head").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 2)
+    document.getElementById("body").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 3)
+    document.getElementById("left-arm").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 4)
+    document.getElementById("right-arm").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 5)
+    document.getElementById("left-leg").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 6)
+    document.getElementById("right-leg").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 7)
+    document.getElementById("eyes").classList.remove("invisible");
+  if (parseInt(errorCountSpan.innerText) === 8)
+    document.getElementById("nose").classList.remove("invisible");
   if (parseInt(errorCountSpan.innerText) === 9) {
+    document.getElementById("mouth").classList.remove("invisible");
     setTimeout(() => {
       alert("AAAAAAAAA, você foi enforcado!");
       ongoingGame = false;
