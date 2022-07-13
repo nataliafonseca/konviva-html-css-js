@@ -18,6 +18,10 @@ async function startGame() {
     setWord();
     playedLetters = [];
     ongoingGame = true;
+    bonequinho = document.getElementById("bonequinho");
+    for (const bodyPart of bonequinho.children) {
+      bodyPart.classList.add("invisible");
+    }
   }
 }
 
