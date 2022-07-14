@@ -27,16 +27,12 @@ async function startGame() {
 
 async function getWord() {
   const response = await fetch(
-    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/palavras"
+    "https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/palavras?_expand=categoria"
   );
   const words = await response.json();
   wordResponse = words[Math.floor(Math.random() * words.length)];
   word = wordResponse.palavra.toLowerCase();
-
-  const response2 = await fetch(
-    `https://my-json-server.typicode.com/nataliafonseca/konviva-html-css-js/categorias/${wordResponse.categoriaId}`
-  );
-  category = (await response2.json()).nome;
+  category = wordResponse.categoria.nome;
 }
 
 function setWord() {
